@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2010-2011 Sonatype, Inc.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="com.sonatype.buildserver.spi.serverProviders" name="Hudson Server Providers" schema="schema/com.sonatype.buildserver.spi.serverProviders.exsd"/>
+   <extension-point id="com.sonatype.buildserver.spi.buildNotifications" name="Build Notifications" schema="schema/com.sonatype.buildserver.spi.buildNotifications.exsd"/>
+   <extension point="org.eclipse.ui.editors">
+      <editor 
+         id="com.sonatype.buildserver.eclipse.ui.job.view.SingleJobView" 
+         name="%singleJobView_title" 
+         icon="icons/matrix.gif"
+         class="com.sonatype.buildserver.eclipse.ui.job.view.SingleJobView"
+         default="true"> 
+      </editor> 
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="org.sonatype.m2e.hudson.viewCategory"
+            name="%mavenStudio">
+      </category>
+      <view
+            category="org.sonatype.m2e.hudson.viewCategory"
+            name="%jobView_title"
+            icon="icons/matrix.gif"
+            class="com.sonatype.buildserver.eclipse.ui.view.JobView"
+            id="com.sonatype.buildserver.eclipse.ui.view.JobView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.sonatype.buildserver.eclipse.ui.StatusNotification$NotificationStartup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.console.consolePageParticipants">
+      <consolePageParticipant
+            class="com.sonatype.buildserver.eclipse.console.HudsonPageParticipant"
+            id="com.sonatype.buildserver.eclipse.console.hudsonPageParticipant">
+         <enablement><instanceof value="com.sonatype.buildserver.eclipse.console.HudsonConsole"/></enablement>
+      </consolePageParticipant>
+   </extension>
+   <extension point="org.eclipse.ui.keywords">
+      <keyword id="com.sonatype.buildserver" label="hudson"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.sonatype.buildserver.eclipse.ui.prefs.PreferencePage"
+            id="com.sonatype.buildserver.eclipse.ui.prefs.PreferencePage"
+            name="Hudson">
+         <keywordReference id="com.sonatype.buildserver"/>
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.sonatype.buildserver.eclipse.ui.prefs.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="com.sonatype.buildserver.spi.buildNotifications">
+         <notification
+            class="com.sonatype.buildserver.eclipse.ui.view.MessageBoxBuildNotification">
+         </notification>
+   </extension>
+   <extension
+         point="com.sonatype.buildserver.spi.buildNotifications">
+         <notification
+            class="com.sonatype.buildserver.eclipse.ui.view.BumpAndFlashBuildNotification">
+         </notification>
+   </extension>
+</plugin>

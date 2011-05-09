@@ -1,0 +1,15 @@
+# Build output
+target
+
+# Eclipse
+.classpath
+.manager
+.project
+.settings
+
+# IntelliJ
+.idea
+*.iml
+
+# Mac stuff
+.DS_Store

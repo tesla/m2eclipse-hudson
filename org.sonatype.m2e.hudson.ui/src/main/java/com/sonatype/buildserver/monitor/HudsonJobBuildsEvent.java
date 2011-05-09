@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * Copyright (c) 2010-2011 Sonatype, Inc.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *******************************************************************************/
+
+package com.sonatype.buildserver.monitor;
+
+import java.util.List;
+
+import com.sonatype.matrix.rest.model.build.BuildDTO;
+
+public class HudsonJobBuildsEvent
+    extends AbstractHudsonJobEvent
+{
+    private List<BuildDTO> builds;
+
+    public HudsonJobBuildsEvent( HudsonJob modified, List<BuildDTO> builds)
+    {
+        super( modified );
+        this.builds = builds;
+    }
+    
+    public List<BuildDTO> getBuilds() {
+        return builds;
+    }
+
+}
