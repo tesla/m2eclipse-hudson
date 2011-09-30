@@ -12,7 +12,7 @@ import org.eclipse.jdt.internal.junit.model.TestCaseElement;
 import org.eclipse.jdt.junit.model.ITestElementContainer;
 import org.eclipse.jdt.junit.model.ITestRunSession;
 
-import com.sonatype.matrix.rest.model.build.TestCaseDTO;
+import org.hudsonci.rest.model.build.TestCaseDTO;
 
 @SuppressWarnings( "restriction" )
 public class HudsonTestCase

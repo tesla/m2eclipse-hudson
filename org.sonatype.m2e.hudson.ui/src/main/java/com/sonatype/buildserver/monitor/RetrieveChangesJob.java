@@ -17,8 +17,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.sonatype.buildserver.eclipse.ui.Messages;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.ChangesDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.ChangesDTO;
 
 class RetrieveChangesJob
     extends Job

@@ -72,12 +72,12 @@ import com.sonatype.buildserver.monitor.HudsonJobChangesEvent;
 import com.sonatype.buildserver.monitor.HudsonJobEvent;
 import com.sonatype.buildserver.monitor.HudsonJobListener;
 import com.sonatype.buildserver.monitor.ErrorJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildStateDTO;
-import com.sonatype.matrix.rest.model.build.ChangeEntryDTO;
-import com.sonatype.matrix.rest.model.build.ChangeFileDTO;
-import com.sonatype.matrix.rest.model.build.ChangesDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildStateDTO;
+import org.hudsonci.rest.model.build.ChangeEntryDTO;
+import org.hudsonci.rest.model.build.ChangeFileDTO;
+import org.hudsonci.rest.model.build.ChangesDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 public class ScmChangesPage
     extends FormPage

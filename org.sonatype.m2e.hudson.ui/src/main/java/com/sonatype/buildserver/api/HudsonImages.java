@@ -22,12 +22,12 @@ public final class HudsonImages
       
   }
 
-  public static final String MATRIX = com.sonatype.buildserver.eclipse.ui.HudsonImages.MATRIX;
+  public static final String HUDSON = com.sonatype.buildserver.eclipse.ui.HudsonImages.HUDSON;
   
   public static final String OVERLAY_CHANGED = com.sonatype.buildserver.eclipse.ui.HudsonImages.OVERLAY_CHANGED;
   
   public static Image getHudsonImage() {
-      return com.sonatype.buildserver.eclipse.ui.HudsonImages.getImage( com.sonatype.buildserver.eclipse.ui.HudsonImages.MATRIX );
+      return com.sonatype.buildserver.eclipse.ui.HudsonImages.getImage( com.sonatype.buildserver.eclipse.ui.HudsonImages.HUDSON );
   }
   
   public static Image getOverlayImage(String base, String overlay, int quadrant) {

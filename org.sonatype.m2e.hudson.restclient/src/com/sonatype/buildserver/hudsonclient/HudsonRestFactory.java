@@ -6,18 +6,18 @@
  * http://www.eclipse.org/legal/epl-v10.html
  *******************************************************************************/
 
-package com.sonatype.buildserver.matrixclient;
+package com.sonatype.buildserver.hudsonclient;
 
 import org.sonatype.guice.bean.binders.WireModule;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import com.sonatype.matrix.rest.client.MatrixClient;
-import com.sonatype.matrix.rest.client.internal.MatrixClientModule;
+import org.hudsonci.rest.client.HudsonClient;
+import org.hudsonci.rest.client.internal.HudsonClientModule;
 
-public class MatrixFactory {
-	public static MatrixClient getClient() {
-		Injector injector = Guice.createInjector(new WireModule(new MatrixClientModule()));
-		return (MatrixClient) injector.getInstance(MatrixClient.class);
+public class HudsonRestFactory {
+	public static HudsonClient getClient() {
+		Injector injector = Guice.createInjector(new WireModule(new HudsonClientModule()));
+		return (HudsonClient) injector.getInstance(HudsonClient.class);
 	}
 }

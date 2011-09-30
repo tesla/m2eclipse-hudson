@@ -14,7 +14,7 @@
       <editor 
          id="com.sonatype.buildserver.eclipse.ui.job.view.SingleJobView" 
          name="%singleJobView_title" 
-         icon="icons/matrix.gif"
+         icon="icons/hudson.gif"
          class="com.sonatype.buildserver.eclipse.ui.job.view.SingleJobView"
          default="true"> 
       </editor> 
@@ -29,7 +29,7 @@
       <view
             category="org.sonatype.m2e.hudson.viewCategory"
             name="%jobView_title"
-            icon="icons/matrix.gif"
+            icon="icons/hudson.gif"
             class="com.sonatype.buildserver.eclipse.ui.view.JobView"
             id="com.sonatype.buildserver.eclipse.ui.view.JobView">
       </view>

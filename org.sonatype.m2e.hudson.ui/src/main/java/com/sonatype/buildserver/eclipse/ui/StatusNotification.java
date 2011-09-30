@@ -55,11 +55,11 @@ import com.sonatype.buildserver.monitor.HudsonJobListener;
 import com.sonatype.buildserver.monitor.CompositeMonitor;
 import com.sonatype.buildserver.monitor.ErrorJob;
 import com.sonatype.buildserver.spi.BuildNotification;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildResultDTO;
-import com.sonatype.matrix.rest.model.build.BuildStateDTO;
-import com.sonatype.matrix.rest.model.build.CauseDTO;
-import com.sonatype.matrix.rest.model.build.UserCauseDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildResultDTO;
+import org.hudsonci.rest.model.build.BuildStateDTO;
+import org.hudsonci.rest.model.build.CauseDTO;
+import org.hudsonci.rest.model.build.UserCauseDTO;
 
 @SuppressWarnings( "restriction" )
 public class StatusNotification

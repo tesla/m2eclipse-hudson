@@ -8,8 +8,8 @@
 
 package com.sonatype.buildserver.monitor;
 
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.ChangesDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.ChangesDTO;
 
 public class HudsonJobChangesEvent
     extends AbstractHudsonJobEvent
