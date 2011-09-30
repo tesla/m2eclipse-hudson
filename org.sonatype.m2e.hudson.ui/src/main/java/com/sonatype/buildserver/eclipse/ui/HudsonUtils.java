@@ -48,18 +48,18 @@ import org.slf4j.LoggerFactory;
 import com.sonatype.buildserver.eclipse.console.HudsonConsole;
 import com.sonatype.buildserver.eclipse.test.HudsonTestSession;
 import com.sonatype.buildserver.eclipse.ui.job.view.SingleJobView;
-import com.sonatype.buildserver.matrixclient.MatrixFactory;
+import com.sonatype.buildserver.hudsonclient.HudsonRestFactory;
 import com.sonatype.buildserver.monitor.HudsonJob;
 import com.sonatype.buildserver.monitor.HudsonManager;
 import com.sonatype.buildserver.monitor.HudsonMonitor;
 import com.sonatype.buildserver.monitor.CompositeMonitor;
 import com.sonatype.buildserver.monitor.ErrorJob;
-import com.sonatype.matrix.rest.client.HandshakeFailedException;
-import com.sonatype.matrix.rest.client.InvalidResponseException;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildResultDTO;
-import com.sonatype.matrix.rest.model.build.TestsDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.client.HandshakeFailedException;
+import org.hudsonci.rest.client.InvalidResponseException;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildResultDTO;
+import org.hudsonci.rest.model.build.TestsDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 import com.sun.jersey.api.client.ClientHandlerException;
 
 @SuppressWarnings( "restriction" )
@@ -512,11 +512,11 @@ public class HudsonUtils
             }
             //409 seems to indicate incompatibility.
             if ( isHandshake && ie.getResponse().getStatus() == 409) {
-                return "Incompatible REST plugin on Hudson server. Client version is " + MatrixFactory.getClient().getVersion();
+                return "Incompatible REST plugin on Hudson server. Client version is " + HudsonRestFactory.getClient().getVersion();
             }
             //400 bad request, unlikely to be thrown but..
             if ( isHandshake && ie.getResponse().getStatus() == 400) {
-                return "Server REST plugin indicated the client sent bad request. Client version is " + MatrixFactory.getClient().getVersion();
+                return "Server REST plugin indicated the client sent bad request. Client version is " + HudsonRestFactory.getClient().getVersion();
             }
             //503 service unavailable, hudson server is starting
             if ( isHandshake && ie.getResponse().getStatus() == 503) {

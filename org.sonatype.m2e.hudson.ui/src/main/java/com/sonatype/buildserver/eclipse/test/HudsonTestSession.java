@@ -10,7 +10,7 @@ package com.sonatype.buildserver.eclipse.test;
 
 import org.eclipse.jdt.internal.junit.model.TestRunSession;
 
-import com.sonatype.matrix.rest.model.build.TestsDTO;
+import org.hudsonci.rest.model.build.TestsDTO;
 
 
 @SuppressWarnings( "restriction" )

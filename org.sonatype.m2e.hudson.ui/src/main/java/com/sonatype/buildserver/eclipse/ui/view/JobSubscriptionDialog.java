@@ -47,7 +47,7 @@ import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonManager;
 import com.sonatype.buildserver.monitor.HudsonMonitor;
 import com.sonatype.buildserver.monitor.CompositeMonitor;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 public class JobSubscriptionDialog
     extends RemoteResourceLookupDialog

@@ -24,7 +24,7 @@ import org.eclipse.ui.forms.widgets.Hyperlink;
 import com.sonatype.buildserver.eclipse.ui.HudsonUtils;
 import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonJob;
-import com.sonatype.matrix.rest.model.build.ChangeEntryDTO;
+import org.hudsonci.rest.model.build.ChangeEntryDTO;
 
 public class ChangeEntryPanel
     extends Composite

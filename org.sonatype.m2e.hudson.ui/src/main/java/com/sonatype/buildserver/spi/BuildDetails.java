@@ -10,7 +10,7 @@ package com.sonatype.buildserver.spi;
 
 import com.sonatype.buildserver.eclipse.ui.StatusNotification;
 import com.sonatype.buildserver.monitor.HudsonJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
 
 public final class BuildDetails {
 	//trampoline magic to avoid public constructor in public class..

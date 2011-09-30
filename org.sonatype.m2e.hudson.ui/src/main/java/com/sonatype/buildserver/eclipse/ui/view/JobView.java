@@ -95,9 +95,9 @@ import com.sonatype.buildserver.monitor.HudsonJob;
 import com.sonatype.buildserver.monitor.HudsonJobEvent;
 import com.sonatype.buildserver.monitor.HudsonJobListener;
 import com.sonatype.buildserver.monitor.CompositeMonitor;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.project.HealthDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.project.HealthDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 @SuppressWarnings( "restriction" )
 public class JobView

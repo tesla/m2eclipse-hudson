@@ -32,8 +32,8 @@ import com.sonatype.buildserver.eclipse.ui.HudsonImages;
 import com.sonatype.buildserver.eclipse.ui.HudsonUtils;
 import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.ConsoleDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.ConsoleDTO;
     
 public class HudsonConsole
     extends MessageConsole

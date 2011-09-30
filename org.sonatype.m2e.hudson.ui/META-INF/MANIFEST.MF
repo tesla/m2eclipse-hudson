@@ -24,11 +24,11 @@ Bundle-Vendor: Sonatype, Inc.
 Bundle-Activator: com.sonatype.buildserver.eclipse.ui.HudsonUIActivator
 Bundle-ActivationPolicy: lazy
 Export-Package: com.sonatype.buildserver.spi,com.sonatype.buildserver.api
-Import-Package: com.sonatype.matrix.rest.client,
- com.sonatype.matrix.rest.client.ext,
- com.sonatype.matrix.rest.model,
- com.sonatype.matrix.rest.model.build,
- com.sonatype.matrix.rest.model.project,
+Import-Package: org.hudsonci.rest.client,
+ org.hudsonci.rest.client.ext,
+ org.hudsonci.rest.model,
+ org.hudsonci.rest.model.build,
+ org.hudsonci.rest.model.project,
  org.eclipse.jdt.internal.junit,
  org.eclipse.jdt.internal.junit.model,
  org.eclipse.jdt.internal.junit.ui,

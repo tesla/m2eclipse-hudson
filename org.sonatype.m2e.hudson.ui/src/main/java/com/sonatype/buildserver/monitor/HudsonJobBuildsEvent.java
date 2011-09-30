@@ -10,7 +10,7 @@ package com.sonatype.buildserver.monitor;
 
 import java.util.List;
 
-import com.sonatype.matrix.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
 
 public class HudsonJobBuildsEvent
     extends AbstractHudsonJobEvent
