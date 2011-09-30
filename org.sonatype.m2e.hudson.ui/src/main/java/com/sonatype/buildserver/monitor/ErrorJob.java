@@ -8,9 +8,9 @@
 
 package com.sonatype.buildserver.monitor;
 
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.project.HealthDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.project.HealthDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 public class ErrorJob
     extends ProjectDTO

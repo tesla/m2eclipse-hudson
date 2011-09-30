@@ -19,10 +19,10 @@ import com.sonatype.buildserver.eclipse.ui.HudsonImages;
 import com.sonatype.buildserver.eclipse.ui.HudsonUtils;
 import com.sonatype.buildserver.monitor.HudsonJob;
 import com.sonatype.buildserver.monitor.ErrorJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildResultDTO;
-import com.sonatype.matrix.rest.model.build.BuildStateDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildResultDTO;
+import org.hudsonci.rest.model.build.BuildStateDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 public class JobLabelProvider
     extends ColumnLabelProvider

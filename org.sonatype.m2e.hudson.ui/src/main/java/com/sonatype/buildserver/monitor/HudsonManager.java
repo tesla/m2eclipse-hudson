@@ -25,24 +25,24 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.sonatype.buildserver.eclipse.ui.HudsonUIActivator;
-import com.sonatype.buildserver.matrixclient.MatrixFactory;
-import com.sonatype.matrix.rest.client.MatrixClient;
-import com.sonatype.matrix.rest.client.OpenOptions;
+import com.sonatype.buildserver.hudsonclient.HudsonRestFactory;
+import org.hudsonci.rest.client.HudsonClient;
+import org.hudsonci.rest.client.OpenOptions;
 
 public class HudsonManager
 {
-    private static final Map<URI, MatrixClient> serverConnections =
-        Collections.synchronizedMap( new HashMap<URI, MatrixClient>() );
+    private static final Map<URI, HudsonClient> serverConnections =
+        Collections.synchronizedMap( new HashMap<URI, HudsonClient>() );
 
     private static final Map<String, HudsonMonitor> monitors = Collections.synchronizedMap( new HashMap<String, HudsonMonitor>() );
     private static final Map<String, CompositeMonitor> composites = Collections.synchronizedMap( new HashMap<String, CompositeMonitor>() );
     private static Logger log = LoggerFactory.getLogger( HudsonManager.class );
 
-    static MatrixClient getServer( URI server )
+    static HudsonClient getServer( URI server )
     {
         synchronized ( serverConnections )
         {
-        	MatrixClient client = serverConnections.get( server );
+            HudsonClient client = serverConnections.get( server );
             if ( client == null )
             {
                 client = createClient(server);
@@ -68,8 +68,8 @@ public class HudsonManager
         }
     }
 
-	private static MatrixClient createClient(URI server) {
-		MatrixClient client = MatrixFactory.getClient();
+	private static HudsonClient createClient(URI server) {
+	    HudsonClient client = HudsonRestFactory.getClient();
 		IAuthData data = AuthFacade.getAuthService().select( server.toString() );
         // Deal with other things like disable self-signed, etc.
 		OpenOptions options = new OpenOptions();
@@ -185,7 +185,7 @@ public class HudsonManager
         }
     }
     
-    public static void setClient( URI uri, MatrixClient client ) {
+    public static void setClient( URI uri, HudsonClient client ) {
         synchronized ( serverConnections )
         {
             serverConnections.put( uri, client );

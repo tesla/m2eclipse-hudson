@@ -18,13 +18,13 @@ import java.util.Map;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.swt.widgets.Display;
 
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildStateDTO;
-import com.sonatype.matrix.rest.model.build.ChangesDTO;
-import com.sonatype.matrix.rest.model.build.ConsoleDTO;
-import com.sonatype.matrix.rest.model.build.TestsDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
-import com.sonatype.matrix.rest.model.project.ProjectReferenceDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildStateDTO;
+import org.hudsonci.rest.model.build.ChangesDTO;
+import org.hudsonci.rest.model.build.ConsoleDTO;
+import org.hudsonci.rest.model.build.TestsDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.project.ProjectReferenceDTO;
 
 public class HudsonJob
 {

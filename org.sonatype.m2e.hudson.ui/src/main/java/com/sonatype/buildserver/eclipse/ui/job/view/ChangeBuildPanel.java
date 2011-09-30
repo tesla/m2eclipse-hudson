@@ -25,7 +25,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import com.sonatype.buildserver.eclipse.ui.HudsonUtils;
 import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
 
 public class ChangeBuildPanel
     extends Composite

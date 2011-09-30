@@ -19,7 +19,7 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 
 import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonJob;
-import com.sonatype.matrix.rest.model.build.ChangeFileDTO;
+import org.hudsonci.rest.model.build.ChangeFileDTO;
 
 public class ChangeEntryFilePanel
     extends Composite

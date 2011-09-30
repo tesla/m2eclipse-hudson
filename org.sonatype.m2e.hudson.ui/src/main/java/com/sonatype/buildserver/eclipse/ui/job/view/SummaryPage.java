@@ -66,11 +66,11 @@ import com.sonatype.buildserver.monitor.HudsonJobBuildsEvent;
 import com.sonatype.buildserver.monitor.HudsonJobEvent;
 import com.sonatype.buildserver.monitor.HudsonJobListener;
 import com.sonatype.buildserver.monitor.ErrorJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildResultDTO;
-import com.sonatype.matrix.rest.model.build.BuildStateDTO;
-import com.sonatype.matrix.rest.model.build.CauseDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildResultDTO;
+import org.hudsonci.rest.model.build.BuildStateDTO;
+import org.hudsonci.rest.model.build.CauseDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 public class SummaryPage
     extends FormPage
@@ -323,7 +323,7 @@ public class SummaryPage
                 mghprlnkParent.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, true, false, 1, 1));
                 managedForm.getToolkit().paintBordersFor(mghprlnkParent);
                 mghprlnkParent.setText("Open Parent Job");
-                mghprlnkParent.setImage( HudsonImages.getImage( HudsonImages.MATRIX ) );
+                mghprlnkParent.setImage( HudsonImages.getImage( HudsonImages.HUDSON ) );
         
         sctnConfigurations = managedForm.getToolkit().createSection(compJob, Section.TITLE_BAR);
         sctnConfigurations.setLayoutData(new GridData(SWT.RIGHT, SWT.FILL, false, false, 1, 5));

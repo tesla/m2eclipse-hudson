@@ -14,8 +14,8 @@ import org.eclipse.jdt.internal.junit.model.TestRoot;
 import org.eclipse.jdt.junit.model.ITestElement;
 import org.eclipse.jdt.junit.model.ITestRunSession;
 
-import com.sonatype.matrix.rest.model.build.TestSuiteDTO;
-import com.sonatype.matrix.rest.model.build.TestsDTO;
+import org.hudsonci.rest.model.build.TestSuiteDTO;
+import org.hudsonci.rest.model.build.TestsDTO;
 
 
 @SuppressWarnings( "restriction" )

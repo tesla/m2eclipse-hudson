@@ -18,11 +18,11 @@ import org.slf4j.LoggerFactory;
 
 import com.sonatype.buildserver.monitor.HudsonJob;
 import com.sonatype.buildserver.monitor.ErrorJob;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildResultDTO;
-import com.sonatype.matrix.rest.model.build.BuildStateDTO;
-import com.sonatype.matrix.rest.model.project.HealthDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildResultDTO;
+import org.hudsonci.rest.model.build.BuildStateDTO;
+import org.hudsonci.rest.model.project.HealthDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
 
 public class HudsonImages
 {
@@ -112,9 +112,9 @@ public class HudsonImages
 
     public static final ImageDescriptor WEB_DESCRIPTOR = getImageDescriptor( WEB );
 
-    public static final String MATRIX = PATH + "matrix.gif";//$NON-NLS-1$
+    public static final String HUDSON = PATH + "hudson.gif";//$NON-NLS-1$
 
-    public static final ImageDescriptor HUDSON_DESCRIPTOR = getImageDescriptor( MATRIX );
+    public static final ImageDescriptor HUDSON_DESCRIPTOR = getImageDescriptor( HUDSON );
 
     public static final Image ADD_CHANGE = getImage( PATH + "document_add.gif" );//$NON-NLS-1$
 

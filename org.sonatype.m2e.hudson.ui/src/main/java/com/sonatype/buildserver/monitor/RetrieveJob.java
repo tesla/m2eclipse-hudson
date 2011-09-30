@@ -28,8 +28,8 @@ import org.slf4j.LoggerFactory;
 import com.sonatype.buildserver.eclipse.ui.HudsonUIActivator;
 import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonJobEvent.EventType;
-import com.sonatype.matrix.rest.client.HandshakeFailedException;
-import com.sonatype.matrix.rest.client.InvalidResponseException;
+import org.hudsonci.rest.client.HandshakeFailedException;
+import org.hudsonci.rest.client.InvalidResponseException;
 
 class RetrieveJob
     extends Job

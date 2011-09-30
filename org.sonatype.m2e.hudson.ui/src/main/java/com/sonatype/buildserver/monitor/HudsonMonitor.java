@@ -31,18 +31,18 @@ import com.sonatype.buildserver.eclipse.ui.HudsonUtils;
 import com.sonatype.buildserver.eclipse.ui.Messages;
 import com.sonatype.buildserver.monitor.HudsonJob.State;
 import com.sonatype.buildserver.monitor.HudsonJobEvent.EventType;
-import com.sonatype.matrix.rest.client.HandshakeFailedException;
-import com.sonatype.matrix.rest.client.MatrixClient;
-import com.sonatype.matrix.rest.client.ext.BuildClient;
-import com.sonatype.matrix.rest.client.ext.BuildClient.BuildListener;
-import com.sonatype.matrix.rest.client.ext.ProjectClient;
-import com.sonatype.matrix.rest.model.build.BuildDTO;
-import com.sonatype.matrix.rest.model.build.BuildEventDTO;
-import com.sonatype.matrix.rest.model.build.ChangesDTO;
-import com.sonatype.matrix.rest.model.build.ConsoleDTO;
-import com.sonatype.matrix.rest.model.build.TestsDTO;
-import com.sonatype.matrix.rest.model.project.ProjectDTO;
-import com.sonatype.matrix.rest.model.project.ProjectReferenceDTO;
+import org.hudsonci.rest.client.HandshakeFailedException;
+import org.hudsonci.rest.client.HudsonClient;
+import org.hudsonci.rest.client.ext.BuildClient;
+import org.hudsonci.rest.client.ext.BuildClient.BuildListener;
+import org.hudsonci.rest.client.ext.ProjectClient;
+import org.hudsonci.rest.model.build.BuildDTO;
+import org.hudsonci.rest.model.build.BuildEventDTO;
+import org.hudsonci.rest.model.build.ChangesDTO;
+import org.hudsonci.rest.model.build.ConsoleDTO;
+import org.hudsonci.rest.model.build.TestsDTO;
+import org.hudsonci.rest.model.project.ProjectDTO;
+import org.hudsonci.rest.model.project.ProjectReferenceDTO;
 
 public class HudsonMonitor
 {
@@ -50,7 +50,7 @@ public class HudsonMonitor
     
     private final URI serverURI;
 
-    private MatrixClient server;
+    private HudsonClient server;
     
     // TODO ReentrantReadWriteLock might have better performance for concurrent server access requests
     private final Object SERVER_LOCK = new Object();
