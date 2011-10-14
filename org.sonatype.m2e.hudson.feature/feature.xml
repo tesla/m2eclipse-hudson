@@ -9,7 +9,7 @@
 <feature
       id="org.sonatype.m2e.hudson.feature"
       label="%label"
-      version="0.13.0.qualifier"
+      version="0.13.0.20111015-0033"
       provider-name="%providerName"
       plugin="org.sonatype.m2e.hudson.ui">
 

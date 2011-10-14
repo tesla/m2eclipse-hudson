@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.sonatype.m2e.hudson.restclient
 Bundle-Name: OSGi-fied Hudson REST Client
-Bundle-Version: 0.13.0.qualifier
+Bundle-Version: 0.13.0.20111015-0033
 Bundle-ClassPath: .,
  jars/async-http-client-1.6.3.jar,
  jars/cometd-api-1.1.2.jar,
