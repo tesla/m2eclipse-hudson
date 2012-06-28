@@ -28,7 +28,7 @@
 
   <properties>
     <tycho-version>0.15.0</tycho-version>
-    <m2e.site-compressed>http://repository.sonatype.org/service/local/repositories/forge-sites/content-compressed/</m2e.site-compressed>
+    <m2e.site-compressed>http://repository.tesla.io:8081/nexus/service/local/repositories/m2e.extras/content-compressed/</m2e.site-compressed>
   </properties>
 
   <repositories>
