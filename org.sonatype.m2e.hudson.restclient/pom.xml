@@ -68,9 +68,14 @@
             <_exportcontents>
               com.sonatype.buildserver.hudsonclient,
               org.hudsonci.common,
-              org.hudsonci.rest.*,
+              org.hudsonci.rest.client,
+              org.hudsonci.rest.client.ext,
+              org.hudsonci.rest.model,
+              org.hudsonci.rest.model.build,
+              org.hudsonci.rest.model.fault,
+              org.hudsonci.rest.model.project,
               com.sun.jersey.api.client,
-              javax.ws.rs.core
+              javax.ws.rs.core            
             </_exportcontents>
             <Import-Package>
               !*
@@ -114,51 +119,5 @@
         </pluginManagement>
       </build>
     </profile>
-    <profile>
-      <id>update-rest-client</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-dependency-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>copy-dependencies</id>
-                <phase>validate</phase>
-                <goals>
-                  <goal>copy-dependencies</goal>
-                </goals>
-                <configuration>
-                  <excludeScope>system</excludeScope>
-                  <excludeArtifactIds>slf4j-api</excludeArtifactIds>
-                  <outputDirectory>${basedir}/jar_new</outputDirectory>
-                  <overWriteReleases>false</overWriteReleases>
-                  <overWriteSnapshots>true</overWriteSnapshots>
-                  <overWriteIfNewer>true</overWriteIfNewer>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-      <dependencies>
-        <dependency>
-          <groupId>org.jvnet.hudson.main</groupId>
-          <artifactId>hudson-rest-client</artifactId>
-          <version>2.1.2</version>
-        </dependency>
-        <dependency>
-          <groupId>org.jvnet.hudson.main</groupId>
-          <artifactId>hudson-utils</artifactId>
-          <version>2.1.2</version>
-        </dependency>
-        <dependency>
-          <groupId>org.sonatype.sisu</groupId>
-          <artifactId>sisu-inject-bean</artifactId>
-          <version>2.2.3</version>
-        </dependency>
-      </dependencies>
-    </profile>
-
   </profiles>
 </project>
