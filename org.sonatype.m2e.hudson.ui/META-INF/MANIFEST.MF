@@ -13,14 +13,13 @@ Require-Bundle: org.eclipse.osgi,
  org.maven.ide.eclipse.grouplayout,
  org.maven.ide.eclipse.swtvalidation,
  org.maven.ide.eclipse.authentication,
- org.sonatype.m2e.hudson.restclient,
  org.eclipse.ui.forms,
  org.eclipse.jface.text,
  org.eclipse.jdt.core,
  org.eclipse.ui.console;bundle-version="3.4.0",
  org.eclipse.ui.ide,
  org.eclipse.core.net;bundle-version="1.2",
- org.sonatype.m2e.hudson.restclient
+ org.sonatype.m2e.hudson.restclient;bundle-version="[0.13.0,1.14.0)"
 Bundle-Vendor: Sonatype, Inc.
 Bundle-Activator: com.sonatype.buildserver.eclipse.ui.HudsonUIActivator
 Bundle-ActivationPolicy: lazy
