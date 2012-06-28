@@ -24,7 +24,7 @@
     <osgi-version-qualifier>${maven.build.timestamp}</osgi-version-qualifier>
     <maven-bundle-plugin.version>2.3.6</maven-bundle-plugin.version>
   </properties>
-  
+
   <dependencies>
     <dependency>
       <groupId>org.jvnet.hudson.main</groupId>
@@ -41,8 +41,8 @@
       <artifactId>sisu-inject-bean</artifactId>
       <version>2.2.3</version>
     </dependency>
-  </dependencies>        
-  
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -52,6 +52,7 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
+            <Embed-Transitive>true</Embed-Transitive>
             <_failok>true</_failok>
             <_nouses>true</_nouses>
             <_nodefaultversion>true</_nodefaultversion>
@@ -69,7 +70,7 @@
               org.hudsonci.common,
               org.hudsonci.rest.*,
               com.sun.jersey.api.client,
-              javax.ws.rs.core                        
+              javax.ws.rs.core
             </_exportcontents>
             <Import-Package>
               !*
@@ -87,8 +88,32 @@
       </plugin>
     </plugins>
   </build>
-  
+
   <profiles>
+    <profile>
+      <activation>
+        <property>
+          <name>m2e.version</name>
+        </property>
+      </activation>
+      <properties>
+        <osgi-version-qualifier>qualifier</osgi-version-qualifier>
+      </properties>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.felix</groupId>
+              <artifactId>maven-bundle-plugin</artifactId>
+              <configuration>
+                  <!-- PDE does not honour custom manifest location -->
+                <manifestLocation>META-INF</manifestLocation>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
     <profile>
       <id>update-rest-client</id>
       <build>
@@ -104,7 +129,7 @@
                   <goal>copy-dependencies</goal>
                 </goals>
                 <configuration>
-		              <excludeScope>system</excludeScope>
+                  <excludeScope>system</excludeScope>
                   <excludeArtifactIds>slf4j-api</excludeArtifactIds>
                   <outputDirectory>${basedir}/jar_new</outputDirectory>
                   <overWriteReleases>false</overWriteReleases>
@@ -112,7 +137,7 @@
                   <overWriteIfNewer>true</overWriteIfNewer>
                 </configuration>
               </execution>
-            </executions>   
+            </executions>
           </plugin>
         </plugins>
       </build>
@@ -132,7 +157,8 @@
           <artifactId>sisu-inject-bean</artifactId>
           <version>2.2.3</version>
         </dependency>
-      </dependencies>      
+      </dependencies>
     </profile>
+
   </profiles>
 </project>
