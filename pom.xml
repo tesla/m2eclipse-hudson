@@ -18,7 +18,6 @@
     <groupId>io.tesla</groupId>
     <artifactId>tesla</artifactId>
     <version>4</version>
-    <relativePath/>
   </parent>
 
   <groupId>org.sonatype.m2e.hudson</groupId>
@@ -46,11 +45,18 @@
       <id>eclipse-commons</id>
       <url>http://repository.sonatype.org/content/sites/forge-sites/eclipse-commons/1.1.7/N/1.1.7.201105091728</url>
       <layout>p2</layout>
-    </repository>    
+    </repository>
   </repositories>
 
+  <dependencies>
+    <dependency>
+      <groupId>org.sonatype.m2e.hudson</groupId>
+      <version>${project.version}</version>
+      <artifactId>org.sonatype.m2e.hudson.restclient</artifactId>
+    </dependency>
+  </dependencies>
+
   <modules>
-    <module>org.sonatype.m2e.hudson.restclient</module>
     <module>org.sonatype.m2e.hudson.ui</module>
     <module>org.sonatype.m2e.hudson.feature</module>
   </modules>
@@ -68,10 +74,9 @@
         <artifactId>target-platform-configuration</artifactId>
         <version>${tycho-version}</version>
         <configuration>
-          <resolver>p2</resolver>
-          <ignoreTychoRepositories>true</ignoreTychoRepositories>
+          <pomDependencies>consider</pomDependencies>
         </configuration>
-      </plugin>     
+      </plugin>
     </plugins>
   </build>
 
@@ -104,7 +109,9 @@
     <profile>
       <id>sign</id>
       <activation>
-        <property><name>jarsigner.alias</name></property>
+        <property>
+          <name>jarsigner.alias</name>
+        </property>
       </activation>
       <build>
         <plugins>
@@ -123,6 +130,21 @@
           </plugin>
         </plugins>
       </build>
+    </profile>
+    <profile>
+      <id>selfhosted-workspace</id>
+      <!--
+      This profile is a convenience meant to help setting up m2e development workspace.
+      On command line, restclient must be built separately, before the rest of the modules. 
+      -->
+      <activation>
+        <property>
+          <name>m2e.version</name>
+        </property>
+      </activation>
+      <modules>
+        <module>org.sonatype.m2e.hudson.restclient</module>
+      </modules>
     </profile>
   </profiles>
 </project>

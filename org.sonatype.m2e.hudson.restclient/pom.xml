@@ -11,15 +11,18 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.sonatype.m2e.hudson</groupId>
-    <artifactId>org.sonatype.m2e.hudson.parent</artifactId>
-    <version>0.13.1-SNAPSHOT</version>
+    <groupId>io.tesla</groupId>
+    <artifactId>tesla</artifactId>
+    <version>4</version>
   </parent>
 
+  <groupId>org.sonatype.m2e.hudson</groupId>
   <artifactId>org.sonatype.m2e.hudson.restclient</artifactId>
+  <version>0.13.1-SNAPSHOT</version>
   <packaging>bundle</packaging>
 
   <properties>
+    <tycho-version>0.15.0</tycho-version>
     <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
     <osgi-version-qualifier>${maven.build.timestamp}</osgi-version-qualifier>
     <maven-bundle-plugin.version>2.3.6</maven-bundle-plugin.version>
@@ -75,7 +78,9 @@
               org.hudsonci.rest.model.fault,
               org.hudsonci.rest.model.project,
               com.sun.jersey.api.client,
-              javax.ws.rs.core            
+              javax.ws.rs.core,
+              com.google.inject.*,
+              org.sonatype.guice.bean.binders.*,
             </_exportcontents>
             <Import-Package>
               !*
@@ -88,8 +93,20 @@
         </configuration>
       </plugin>
       <plugin>
+        <!-- igorf: copy&paste from m2e pom.xml, can't remember why I needed this quite honestly -->
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-p2-plugin</artifactId>
+        <version>${tycho-version}</version>
+        <executions>
+          <execution>
+            <id>p2-metadata</id>
+            <goals>
+              <goal>p2-metadata</goal>
+              <goal>update-local-index</goal>
+            </goals>
+            <phase>package</phase>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
