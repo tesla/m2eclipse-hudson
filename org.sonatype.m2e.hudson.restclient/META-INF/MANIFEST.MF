@@ -1,20 +1,20 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1340922402435
+Bnd-LastModified: 1340927662815
 Build-Jdk: 1.6.0_31
 Built-By: jvanzyl
-Bundle-ClassPath: .,hudson-rest-client-2.1.2.jar,hudson-rest-common-2.1.
- 2.jar,jsr311-api-1.1.1.jar,hudson-rest-model-2.1.2.jar,jackson-core-asl
- -1.7.1.jar,jackson-mapper-asl-1.7.1.jar,jackson-jaxrs-1.7.1.jar,jackson
- -xc-1.7.1.jar,maven3-model-2.1.2.jar,gwt-hashcode-equals-0.1.0.jar,jers
- ey-ahc-client-1.0.1.jar,jersey-client-1.5.jar,jersey-core-1.5.jar,async
- -http-client-1.6.3.jar,netty-3.2.4.Final.jar,cometd-java-asynchttpclien
- t-1.1.jar,cometd-java-server-1.1.2.jar,cometd-api-1.1.2.jar,jetty-util-
- 7.1.5.v20100705.jar,jetty-continuation-7.1.5.v20100705.jar,jetty-client
- -7.1.5.v20100705.jar,jetty-http-7.1.5.v20100705.jar,jetty-io-7.1.5.v201
- 00705.jar,servlet-api-2.5.jar,hudson-utils-2.1.2.jar,slf4j-api-1.6.1.ja
- r,commons-lang3-3.0.1.jar,guava-r09.jar,gossip-support-1.7.jar,gossip-b
- ootstrap-1.7.jar,xstream-1.4.1-hudson-1.jar,xmlpull-1.1.3.1.jar,xpp3_mi
- n-1.1.4c.jar,sisu-inject-bean-2.2.3.jar,sisu-guice-3.0.3-no_aop.jar
+Bundle-ClassPath: hudson-rest-client-2.1.2.jar,hudson-rest-common-2.1.2.
+ jar,jsr311-api-1.1.1.jar,hudson-rest-model-2.1.2.jar,jackson-core-asl-1
+ .7.1.jar,jackson-mapper-asl-1.7.1.jar,jackson-jaxrs-1.7.1.jar,jackson-x
+ c-1.7.1.jar,maven3-model-2.1.2.jar,gwt-hashcode-equals-0.1.0.jar,jersey
+ -ahc-client-1.0.1.jar,jersey-client-1.5.jar,jersey-core-1.5.jar,async-h
+ ttp-client-1.6.3.jar,netty-3.2.4.Final.jar,cometd-java-asynchttpclient-
+ 1.1.jar,cometd-java-server-1.1.2.jar,cometd-api-1.1.2.jar,jetty-util-7.
+ 1.5.v20100705.jar,jetty-continuation-7.1.5.v20100705.jar,jetty-client-7
+ .1.5.v20100705.jar,jetty-http-7.1.5.v20100705.jar,jetty-io-7.1.5.v20100
+ 705.jar,servlet-api-2.5.jar,hudson-utils-2.1.2.jar,slf4j-api-1.6.1.jar,
+ commons-lang3-3.0.1.jar,guava-r09.jar,gossip-support-1.7.jar,gossip-boo
+ tstrap-1.7.jar,xstream-1.4.1-hudson-1.jar,xmlpull-1.1.3.1.jar,xpp3_min-
+ 1.1.4c.jar,sisu-inject-bean-2.2.3.jar,sisu-guice-3.0.3-no_aop.jar
 Bundle-Description: Tesla: A next generation development infrastructure 
  framework.
 Bundle-License: http://www.eclipse.org/legal/epl-v10.html

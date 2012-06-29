@@ -61,7 +61,7 @@
             <Bundle-RequiredExecutionEnvironment>J2SE-1.5,JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
             <Bundle-Name>%Bundle-Name</Bundle-Name>
             <Bundle-Vendor>%Bundle-Vendor</Bundle-Vendor>
-            <Bundle-ClassPath>.,{maven-dependencies}</Bundle-ClassPath>
+            <Bundle-ClassPath>{maven-dependencies}</Bundle-ClassPath>
             <Embed-Dependency>
               *;scope=compile|runtime
             </Embed-Dependency>
