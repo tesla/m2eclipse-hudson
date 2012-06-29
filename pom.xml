@@ -132,7 +132,7 @@
       </build>
     </profile>
     <profile>
-      <id>selfhosted-workspace</id>
+      <id>wrapper-bundle</id>
       <!--
       This profile is a convenience meant to help setting up m2e development workspace.
       On command line, restclient must be built separately, before the rest of the modules. 
